@@ -1,0 +1,210 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function check_submit()
+		{	
+			var applianceid=document.getElementById("applianceid");
+                        var aname=document.getElementById("aname");
+	                var bname=document.getElementById("bname");
+	                var rent=document.getElementById("rent");
+							
+                        var fname=document.getElementById("ffname");
+			var lname=document.getElementById("flname");
+			var year=document.getElementById("year");
+			var street=document.getElementById("street");
+			var city=document.getElementById("city");
+			var state=document.getElementById("state");
+			var country=document.getElementById("country");
+			var zipcode=document.getElementById("zipcode");
+			var email_id=document.getElementById("email_id");
+			var phoneno=document.getElementById("phoneno");
+			if(applianceid.value=="")
+			{
+				alert("Enter UserId");
+				applianceid.focus();
+				return false;
+			}
+			if(aname.value=="")
+			{
+				alert("Enter UserId");
+				aname.focus();
+				return false;
+			}
+			if(bname.value=="")
+			{
+				alert("Enter UserId");
+				bname.focus();
+				return false;
+			}
+                        if(rent.value=="")
+			{
+				alert("Enter UserId");
+				rent.focus();
+				return false;
+			}
+                        
+			if(ffname.value=="")
+			{
+				alert("Enter first name");
+				ffname.focus();
+				return false;
+			}
+			if(flname.value=="")
+			{
+				alert("Enter last name");
+				flname.focus();
+				return false;
+			}
+			
+			if(street.value=="")
+			{
+				alert("Enter the street");
+				street.focus();
+				return false;
+			}
+			if(city.value=="")
+			{
+				alert("Enter the city");
+				city.focus();
+				return false;
+			}
+			if(state.value=="")
+			{
+				alert("Enter the state");
+				state.focus();
+				return false;
+			}
+			if(country.value=="")
+			{
+				alert("Enter the country");
+				country.focus();
+				return false;
+			}
+			if(zipcode.value=="")
+			{
+				alert("Enter the zipcode");
+				zipcode.focus();
+				return false;
+			}
+			if(email_id.value=="")
+			{
+				alert("Enter the emailid");
+				email_id.focus();
+				return false;
+			}
+			if(email_id.value!="")
+			{	var posi=email_id.value;
+				apos=posi.indexOf("@")
+				dotpos=posi.lastIndexOf(".")
+				if (apos<1||dotpos-apos<2) 
+				{
+					alert("not A Valid EMAIL Address");
+					email_id.focus();
+					return false;
+				}
+			}
+			if(phoneno.value=="")
+			{
+				alert("Enter the phoneno");
+				phoneno.focus();
+				return false;
+			}
+			
+		}
+		function checknumeric()
+		{
+			if(window.event.keyCode<47)
+			{
+				window.event.keyCode=0;
+				alert("characters not allowed");
+			}
+			if(window.event.keyCode>58)
+			{
+				window.event.keyCode=0;
+				alert("characters not allowed");
+			}
+		}
+	</script>
+
+        <style>
+            
+             a:link {color: gray}
+a:visited {color:gray}
+a:hover {color:royalblue}
+a:active {color:white}
+
+  
+
+    .full-width-background {
+   margin-left: -100px;
+   margin-right: -100px;
+ }
+ 
+ .full-width {
+   margin-left: -100px;
+   margin-right: -100px;
+ }
+ .fwb-red {
+   background-color: royalblue;
+ }
+        </style>
+</head>
+<body >
+    <div>
+        <center>
+   	<table width="678" height="502" border="0" style="align-content:center  position:relative;
+               box-shadow:10px 10px 10px gray;">
+		
+  		<tr>
+                    <td height="91" style="position:relative;left: 100px; ">
+                        <pre><h1><i> Furniture Advert</i></h1></pre><hr width="540" style="position:relative;left:-100px; "></td>
+		
+                        
+  		<tr>
+			<td>
+				<center>
+<form name="advertreg" onsubmit="return check_submit()" action="./Amenities" method="post" >
+ <table width="500" height="30" border="0" >
+     						
+<tr bgcolor="#000033" style="color:#FFF">
+            <td colspan=2><center>Amenities-Step3</center></td>
+ </tr>
+	<tr>
+        <td>
+            <input  name="cupboard" type="checkbox" value="cupboard">Cupboard<br>
+           <input type="hidden" name="cupboard" value="null">
+
+            <input  name="telivision" type="checkbox" value="telivision">Telivision<br>
+            <input type="hidden" name="telivision" value="null">
+
+            <input  name="ac" type="checkbox" value="ac">AC<br>
+            <input type="hidden" name="ac" value="null">
+
+            <input  name="fridge" type="checkbox" value="fridge">Fridge<br>
+            <input type="hidden" name="fridge" value="null">
+
+            <input  name="toilet" type="checkbox" value="toilet">Attached Toilet<br>
+        <input type="hidden" name="toilet" value="null">
+
+            <input  name="tablechair" type="checkbox" value="tablechair">Table/Chair
+        <input type="hidden" name="tablechair" value="null">
+
+        </td>
+        </tr>
+	
+
+								
+	<tr>
+	<td colspan=2><center><input name="submit" type="submit" value="SUBMIT">
+	<input name="reset" type="reset" value="RESET">
+	</td>
+	</tr>
+	</table>
+</form>
+      					</center>
+				</td>
+			</tr>
+ </table></center></div>
+    	
+</body>
+</html>
