@@ -1,0 +1,77 @@
+
+<html>
+    <head>
+        <style>
+  
+            .advert{
+                display: inline-block;
+            }
+
+section {
+  display: inline-block;
+  }
+
+input[type="radio"] {
+   display: none;
+
+ &:not(:disabled) ~ label {
+    cursor: pointer;
+  }
+ 
+}
+.advertlabel {
+  color:#fff; 
+  
+  padding-bottom: 6px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 6px;
+  
+  width: 120px;
+  font-size: 12px;
+  display:block;
+  background: #000033;
+  border: 2px solid white;
+   text-align: center;
+  }
+input[type="radio"]:checked + label {
+  background: white;
+  color: black;
+  border: 2px solid white;
+  font-size: 12px;
+ 
+  
+}
+
+
+
+
+
+
+
+        </style>   
+    </head>
+    <body>
+    <section>
+<div class="advert">
+  <input type="radio" id="control_01" name="select" value="1" checked>
+  <label class="advertlabel" for="control_01">
+    <h2>Flat</h2>
+   </label>
+</div>
+        <div class="advert">
+  <input type="radio" id="control_02" name="select" value="2">
+  <label class="advertlabel" for="control_02">
+    <h2>Furniture</h2>
+    </label>
+</div>
+<div class="advert">
+  <input type="radio" id="control_03" name="select" value="3">
+  <label class="advertlabel" for="control_03">
+    <h2>Appliances</h2>
+    </label>
+</div>
+
+
+</section>
+    </body> </html>

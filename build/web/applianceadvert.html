@@ -1,0 +1,251 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function check_submit()
+		{	
+			var applianceid=document.getElementById("applianceid");
+                        var aname=document.getElementById("aname");
+	                var bname=document.getElementById("bname");
+	                var rent=document.getElementById("rent");
+							
+                        var fname=document.getElementById("ffname");
+			var lname=document.getElementById("flname");
+			var year=document.getElementById("year");
+			var street=document.getElementById("street");
+			var city=document.getElementById("city");
+			var state=document.getElementById("state");
+			var country=document.getElementById("country");
+			var zipcode=document.getElementById("zipcode");
+			var email_id=document.getElementById("email_id");
+			var phoneno=document.getElementById("phoneno");
+			if(applianceid.value=="")
+			{
+				alert("Enter UserId");
+				applianceid.focus();
+				return false;
+			}
+			if(aname.value=="")
+			{
+				alert("Enter UserId");
+				aname.focus();
+				return false;
+			}
+			if(bname.value=="")
+			{
+				alert("Enter UserId");
+				bname.focus();
+				return false;
+			}
+                        if(rent.value=="")
+			{
+				alert("Enter UserId");
+				rent.focus();
+				return false;
+			}
+                        
+			if(ffname.value=="")
+			{
+				alert("Enter first name");
+				ffname.focus();
+				return false;
+			}
+			if(flname.value=="")
+			{
+				alert("Enter last name");
+				flname.focus();
+				return false;
+			}
+			
+			if(street.value=="")
+			{
+				alert("Enter the street");
+				street.focus();
+				return false;
+			}
+			if(city.value=="")
+			{
+				alert("Enter the city");
+				city.focus();
+				return false;
+			}
+			if(state.value=="")
+			{
+				alert("Enter the state");
+				state.focus();
+				return false;
+			}
+			if(country.value=="")
+			{
+				alert("Enter the country");
+				country.focus();
+				return false;
+			}
+			if(zipcode.value=="")
+			{
+				alert("Enter the zipcode");
+				zipcode.focus();
+				return false;
+			}
+			if(email_id.value=="")
+			{
+				alert("Enter the emailid");
+				email_id.focus();
+				return false;
+			}
+			if(email_id.value!="")
+			{	var posi=email_id.value;
+				apos=posi.indexOf("@")
+				dotpos=posi.lastIndexOf(".")
+				if (apos<1||dotpos-apos<2) 
+				{
+					alert("not A Valid EMAIL Address");
+					email_id.focus();
+					return false;
+				}
+			}
+			if(phoneno.value=="")
+			{
+				alert("Enter the phoneno");
+				phoneno.focus();
+				return false;
+			}
+			
+		}
+		function checknumeric()
+		{
+			if(window.event.keyCode<47)
+			{
+				window.event.keyCode=0;
+				alert("characters not allowed");
+			}
+			if(window.event.keyCode>58)
+			{
+				window.event.keyCode=0;
+				alert("characters not allowed");
+			}
+		}
+	</script>
+
+        <style>
+            
+             a:link {color: gray}
+a:visited {color:gray}
+a:hover {color:royalblue}
+a:active {color:white}
+
+  
+
+    .full-width-background {
+   margin-left: -100px;
+   margin-right: -100px;
+ }
+ 
+ .full-width {
+   margin-left: -100px;
+   margin-right: -100px;
+ }
+ .fwb-red {
+   background-color: royalblue;
+ }
+        </style>
+</head>
+<body >
+    <div>
+        <center>
+   	<table width="678" height="502" border="0" style="align-content:center  position:relative;
+               box-shadow:10px 10px 10px gray;">
+		
+  		<tr>
+                    <td height="91" style="position:relative;left: 100px; ">
+                        <pre><h1><i> Electronic Appliances Advert</i></h1></pre><hr width="540" style="position:relative;left:-100px; "></td>
+		
+                        
+  		<tr>
+			<td>
+				<center>
+<form name="advertreg" onsubmit="return check_submit()" action="./applianceregservlet" method="post" >
+ <table width="500" height="30" border="0" >
+     <tr bgcolor="#000033" style="color:#FFF">
+             <td colspan=2><center>APPLIANCE INFO</center></td>
+        </tr>
+								
+                                                                        
+        <tr>
+            <td><center>Appliance Name</center></td>
+	<td><input id="aname" name="aname" type="text" size="50" maxlength="100" value=""></td>
+        </tr>
+                                                                        
+        <tr>
+         <td><center>Brand Name</center></td>
+	<td><input id="bname" name="bname" type="text" size="50" maxlength="100" value=""></td>
+               </tr>
+                                                                        
+	<tr>
+         <td><center>Rent(per month)</center></td>
+	<td><input id="rent" name="rent" type="text" size="50" maxlength="100" value=""></td>
+       </tr>
+		<tr>
+         <td><center>Image</center></td>
+	<td><input id="image" name="image" type="file" size="50" maxlength="100" value="Upload Image"></td>
+       </tr>						
+								
+	<tr bgcolor="#000033" style="color:#FFF">
+            <td colspan=2><center>PERSONAL INFO</center></td>
+         </tr>
+	<tr>
+         <td><center>FirstName</center></td>
+	<td><input id="ffname" name="ffname" type="text" size="50" maxlength="100" value=""></td>
+         </tr>
+	<tr>
+          <td><center>LastName</center></td>
+	<td><input id="flname" name="flname" type="text" size="50" maxlength="100" value=""></td>
+          </tr>
+								
+								
+								
+	<tr bgcolor="#000033" style="color:#FFF">
+            <td colspan=2><center>ADDRESS</center></td>
+         </tr>
+	<tr>
+           <td><center>Street</center></td>
+	<td><input id="street" name="street" type="text" size="50" maxlength="100" value=""></td>
+         </tr>
+	<tr>
+         <td><center>City/Area</center></td>
+	<td><input id="city" name="city" type="text" size="50" maxlength="100" value=""></td>
+         </tr>
+	<tr>
+          <td><center>State</center></td>
+	<td><input id="state" name="state" type="text" size="50" maxlength="100" value=""></td>
+         </tr>
+	<tr>
+         <td><center>Country</center></td>
+	<td><input id="country" name="country" type="text" size="50" maxlength="100" value=""></td>
+        </tr>
+	<tr>
+          <td><center>ZipCode</center></td>
+	<td><input id="zipcode" name="zipcode" type="text" size="50" maxlength="100" value="" onkeypress="checknumeric()"></td>
+        </tr>
+	<tr>
+         <td><center>Email_id</center></td>
+	<td><input id="emai_id" name="email_id" type="text" size="50" maxlength="100" value=""></td>
+         </tr>
+	<tr>
+        <td><center>PhoneNo</center></td>
+	<td><input id="phoneno" name="phoneno" type="text" size="50" maxlength="100" value="" onkeypress="checknumeric()"></td>
+         </tr>
+								
+	<tr>
+	<td colspan=2><center><input name="submit" type="submit" value="SUBMIT">
+	<input name="reset" type="reset" value="RESET">
+	</td>
+	</tr>
+	</table>
+</form>
+      					</center>
+				</td>
+			</tr>
+ </table></center></div>
+    	
+</body>
+</html>
